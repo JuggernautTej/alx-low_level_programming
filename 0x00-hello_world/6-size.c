@@ -1,6 +1,8 @@
 #include<stdio.h>
 /**
- *main - entry point
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -8,11 +10,10 @@ char c;
 int i;
 float z;
 
-printf("Size of a char: %lu byte(s)\n", sizeof(c));
-printf("Size of an int: %lu byte(s)\n", sizeof(i));
-printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(i));
-printf("Size of a long long int: %llu byte(s)\n", (unsigned long long)sizeof(i));
+printf("Size of a char: %d byte(s)\n",(int)  sizeof(c));
+printf("Size of an int: %d byte(s)\n", (int) sizeof(i));
+printf("Size of a long int: %ld byte(s)\n",(long int) sizeof(i));
+printf("Size of a long long int: %lld byte(s)\n",(long long int) sizeof(i));
 printf("Size of a float: %lu byte(s)\n", sizeof(z));
-       
 return (0);
 }
