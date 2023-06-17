@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(void)
+{
+  long long int b;
+  printf(sizeof (b));
+
+  return (0);
+}
