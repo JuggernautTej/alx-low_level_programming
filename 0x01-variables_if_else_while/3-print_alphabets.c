@@ -12,8 +12,8 @@ for (beta = 'a'; beta <= 'z' ; beta++)
 {
 putchar(beta);
 }
- for (beta= 'A'; beta <= 'Z'; beta++)
-   {putchar (beta);}
- putchar('\n');
+for (beta = 'A'; beta <= 'Z'; beta++)
+{putchar (beta); }
+putchar('\n');
 return (0);
 }
