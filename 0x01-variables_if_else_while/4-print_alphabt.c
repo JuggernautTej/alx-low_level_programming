@@ -10,8 +10,8 @@ char beta;
 
 for (beta = 'a'; beta <= 'z' ; beta++)
 {
-if ( beta == 'q' || beta == 'e')
-continue ;
+if (beta == 'q' || beta == 'e')
+continue;
 putchar(beta);
 }
 putchar('\n');
