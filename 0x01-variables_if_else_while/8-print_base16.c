@@ -11,12 +11,12 @@ int a;
 
 char b;
   
-for (int a = 0; a <= 9; a++)
+for (a = 0; a <= 9; a++)
 {
 putchar(a + '0');
 }
   
-for (char b = 'a'; b <= 'f'; b++)
+for (b = 'a'; b <= 'f'; b++)
 {
 putchar (b);
 }
