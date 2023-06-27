@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *main - function to point to an int and updates value to 98
+ *main - viod reset_to_98 function to point to an int, n, and updates value to 98
  *
  *Return: nothing.
  */
