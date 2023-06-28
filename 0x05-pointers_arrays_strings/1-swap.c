@@ -9,7 +9,7 @@
  *Return: nothing.
  */
 void swap_int(int *a, int *b)
-{ 
+{
 int brk = *a;
 *a = *b;
 *b = brk;
