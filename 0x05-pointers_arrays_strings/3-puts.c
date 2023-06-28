@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *_strlen - function to return lenght of a string
+ *_puts - function to return lenght of a string
  *
- *@s: A parameter pointing to a character.
+ *@str: A parameter pointing to a character.
  *
  *Return: nothing.
  */
@@ -16,5 +16,4 @@ while (str[i] != '\0')
   _putchar(str[i]);
 i++;
 }
-return (i);
 }
