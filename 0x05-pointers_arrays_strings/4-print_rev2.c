@@ -9,17 +9,10 @@
  */
 void print_rev(char *str)
 {
-int le = 0;
-
-while (str[le] != '\0')
+if (*str == '\0')
 {
-le++;
+return;
 }
-
-while (le > 0)
-{
-le--;
-_putchar(str[le]);
-}
- _putchar('\n');
+print_rev(str + 1);
+_putchar(*str);
 }
