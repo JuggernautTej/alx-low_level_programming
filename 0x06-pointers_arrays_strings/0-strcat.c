@@ -3,15 +3,17 @@
 /**
  *_strcat - A function that concatenates strings.
  *
- *@dest; This is a pointer variable to a character
- *@src; Same as dest.
+ *@dest; destination string.
+ *@src; Source string.
  *
- *Return: dest.
+ *Return: pointer to the resulting string @dest.
  */
 char *_strcat(char *dest, char *src)
 {
-int i, le = 0;
-while (dest(le) != '\0')
+int i = 0;
+int le = 0;
+
+while (dest[le] != '\0')
 {
 le++;
 }
