@@ -9,10 +9,15 @@
  */
 void rev_string(char *s)
 {
-if (*s == '\0')
-{
-return;
-}
-rev_string(s + 1);
-_putchar(*s);
+  int start = 0;
+  int end = 0;
+
+  while (start < end)
+    {
+      char temp = s[start];
+      s[start] = s[end];
+      s[end] = temp;
+      start++;
+      end--;
+    }
 }
