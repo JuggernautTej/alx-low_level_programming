@@ -13,8 +13,9 @@ if (*str == '\0')
 {
 return;
 }
-
-for (int i = 0; str[i] != '\0'; i += 2)
+int i = 0;
+ 
+for (i = 0; str[i] != '\0'; i += 2)
 {
 _putchar(str[i]);
 }
