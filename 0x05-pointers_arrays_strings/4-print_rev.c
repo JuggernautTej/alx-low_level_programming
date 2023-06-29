@@ -15,5 +15,4 @@ return;
 }
 print_rev(str + 1);
 _putchar(*str);
-_putchar('\n');
 }
