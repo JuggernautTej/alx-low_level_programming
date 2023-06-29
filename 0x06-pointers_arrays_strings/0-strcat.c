@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *_strcat - A function that concatenates strings.
  *
