@@ -16,7 +16,7 @@ while (s[end] != '\0')
 {
 end++;
 }
-end--;  
+end--;
 while (start < end)
 {
 char temp = s[start];
