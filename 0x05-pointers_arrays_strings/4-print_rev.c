@@ -21,5 +21,5 @@ while (le > 0)
 le--;
 _putchar(str[le]);
 }
- _putchar('\n');
+_putchar('\n');
 }
