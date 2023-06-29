@@ -14,5 +14,5 @@ if (*str == '\0')
 return;
 }
 print_rev(str + 1);
-_putchar(*str);
+_putchar(*str\n);
 }
