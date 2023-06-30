@@ -29,10 +29,10 @@ return (0);
 }
 else if (s1[i] == '\0')
 {
-return (-1);
+return (result1);
 }
 else
 {
-return (1);
+return (result1);
 }
 }
