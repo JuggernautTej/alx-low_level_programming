@@ -9,18 +9,22 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int result1 = *s1 - *s2;
-while (*s1 && *s2 && *s1 == *s2)
+int i = 0;
+int result1 = s1[i] - s2[i];
+while (s1[i] == s2[i] && s1[i] != '\0')
 {
-s1++;
-s2++;
+i++;
 }
-if (*s1 == *s2)
+if (s1[i] < s2[i])
 {
-return (0);
+return (result1);
+}
+else if (s1[i] > s2[i])
+{
+return (result1);
 }
 else
 {
-return (result1);
+return (0);
 }
 }
