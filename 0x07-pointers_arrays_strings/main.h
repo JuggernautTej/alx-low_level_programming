@@ -9,5 +9,6 @@ char *string_toupper(char *des);
 char *cap_string(char *str);
 char *leet(char *code);
 char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
 
 #endif
