@@ -1,0 +1,29 @@
+#include"main.h"
+/**
+ *_strspn - A function that gets tje lenght of a prefix substrings.
+ *
+ *@s: pointer to string.
+ *@accept: pointer to control string.
+ *Return:value of new character string.
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+int x,y;
+unsigned int length = 0;
+for (x = 0; s[x] != '\0'; x++)
+{
+for (y = 0; accept[y] != '\0'; y++)
+{
+if (s[x] == accept[y])
+{
+length++;
+break;
+}
+}
+if (s[x] != accept[y])
+{
+return (length);
+}
+}
+return (length);
+}
