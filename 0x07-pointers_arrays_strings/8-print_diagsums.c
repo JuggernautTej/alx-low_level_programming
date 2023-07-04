@@ -9,8 +9,8 @@
  */
 void print_diagsums(int *a, int size)
 {
-unsigned int main_diagsum = 0;
-unsigned int off_diagsum = 0;
+int main_diagsum = 0;
+int off_diagsum = 0;
 int x;
 for (x = 0; x < size; x++)
 {
@@ -20,5 +20,5 @@ for (x = size - 1; x >= 0; x--)
 {
 off_diagsum += a[x * size + (size - x - 1)];
 }
-printf("%u, %u\n", main_diagsum, off_diagsum);
+printf("%d, %d\n", main_diagsum, off_diagsum);
 }
