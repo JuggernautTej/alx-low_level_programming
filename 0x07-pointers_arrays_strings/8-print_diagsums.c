@@ -12,14 +12,11 @@ void print_diagsums(int *a, int size)
 {
 int main_diagsum = 0;
 int off_diagsum = 0;
-int x, y;
-for (x = 0; x <= (size * size); x = x + size + 1)
+int x;
+for (x = 0; x < size; x++)
 {
-main_diagsum = main_diagsum + a[x];
-}
-for (y = size - 1; y <= (size * size) - size; y = y + size - 1)
-{
-off_diagsum = off_diagsum + a[y];
+main_diagsum += a[(size * x) + x];
+off_diagsum += a[(size * (x + 1)) - (x + 1)];
 }
 printf(" %d, %d\n", main_diagsum, off_diagsum);
 }
