@@ -1,0 +1,26 @@
+#include"main.h"
+/**
+ *_strpbrk - A function that gets the lenght of a prefix substrings.
+ *
+ *@s: pointer to string.
+ *@accept: pointer to control string.
+ *Return: pointer to byte in @s or NULL.
+ */
+char *_strpbrk(char *s, char *accept)
+{
+char *temp;
+while (*s != '\0')
+{
+temp = accept;
+while (*temp != '\0')
+{
+if (*s == *temp)
+{
+return (s);
+}
+temp++;
+}
+s++;
+}
+return (s);
+}
