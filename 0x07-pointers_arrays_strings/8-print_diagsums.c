@@ -6,7 +6,7 @@
  *
  *@a: pointer to an array.
  *@size: size of matrix.
- *Return: Always 0.
+ *Return: void.
  */
 void print_diagsums(int *a, int size)
 {
