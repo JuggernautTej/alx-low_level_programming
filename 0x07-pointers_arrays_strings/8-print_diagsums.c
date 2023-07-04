@@ -10,13 +10,13 @@
  */
 void print_diagsums(int *a, int size)
 {
-int main_diagsum = 0;
-int off_diagsum = 0;
+unsigned int main_diagsum = 0;
+unsigned int off_diagsum = 0;
 int x;
 for (x = 0; x < size; x++)
 {
 main_diagsum += a[(size * x) + x];
 off_diagsum += a[(size * (x + 1)) - (x + 1)];
 }
-printf(" %d, %d\n", main_diagsum, off_diagsum);
+printf(" %u, %u\n", main_diagsum, off_diagsum);
 }
