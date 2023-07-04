@@ -16,6 +16,9 @@ int x;
 for (x = 0; x < size; x++)
 {
 main_diagsum += a[(size * x) + x];
+}
+for (x = size - 1; x >= 0; x--)
+{
 off_diagsum += a[(size * (x + 1)) - (x + 1)];
 }
 printf(" %u, %u\n", main_diagsum, off_diagsum);
