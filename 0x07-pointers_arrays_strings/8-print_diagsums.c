@@ -3,7 +3,6 @@
 /**
  *print_diagsums - A function that prints the sum of the diagonals of
  *a square matrix of integers.
- *
  *@a: pointer to an array.
  *@size: size of matrix.
  *Return: void.
@@ -15,11 +14,11 @@ unsigned int off_diagsum = 0;
 int x;
 for (x = 0; x < size; x++)
 {
-main_diagsum += a[(size * x) + x];
+main_diagsum = main_diagsum + a[(size * x) + x];
 }
 for (x = size - 1; x >= 0; x--)
 {
-off_diagsum += a[(size * (x + 1)) - (x + 1)];
+off_diagsum += a[x * size + (size - x - 1)];
 }
 printf("%u, %u\n", main_diagsum, off_diagsum);
 }
