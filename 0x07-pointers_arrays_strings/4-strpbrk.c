@@ -4,23 +4,21 @@
  *
  *@s: pointer to string.
  *@accept: pointer to control string.
- *Return: pointer to byte in @s or NULL.
+ *Return: Always 0.
  */
 char *_strpbrk(char *s, char *accept)
 {
-char *temp;
-while (*s != '\0')
+int y;
+while (*s)
 {
-temp = accept;
-while (*temp != '\0')
+for (y = 0; accept[y]; y++)
 {
-if (*s == *temp)
+if (*s == accept[y])
 {
 return (s);
 }
-temp++;
 }
 s++;
 }
-return (s);
+return ('\0');
 }
