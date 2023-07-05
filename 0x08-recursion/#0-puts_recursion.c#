@@ -1,5 +1,5 @@
 #include"main.h"
-/**
+11;rgb:0000/0000/0000/**
  *_puts_recursion - A function that prints the a string, followed by a line.
  *@s: pointer to a string.
  *Return: void.
@@ -9,7 +9,7 @@ void _puts_recursion(char *s)
 int i = 0;
 if (*s == '\0')
 {
-return ();
+return();
 }
 else
 {
