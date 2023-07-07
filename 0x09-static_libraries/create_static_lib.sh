@@ -8,3 +8,4 @@ object_files=("0-isupper.o" "0-memset.o" "0-strcat.o" "100-atoi.o" "1-isdigit.o"
 library_name="liball.a"
 
 ar rc "$library_name" "${object_files[@]}"
+
