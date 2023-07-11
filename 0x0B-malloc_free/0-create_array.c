@@ -15,7 +15,7 @@ char *b;
 unsigned int x;
 if (size == 0)
 return (NULL);
-b =  malloc(sizeof(char) * (size + 1));
+b =  malloc(sizeof(char) * (size));
 if (b == NULL)
 {
 return (NULL);
