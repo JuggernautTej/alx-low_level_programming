@@ -1,5 +1,4 @@
 #include"main.h"
-#include<string.h>
 #include<stdlib.h>
 /**
  *string_nconcat - A function that concatenates two strings.
@@ -10,45 +9,31 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int x, y;
+unsigned int x = 0, y = 0, len1 = 0, len2 = 0;
 char *p;
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
-if (n < strlen(s2))
-{
-p = malloc(sizeof(char) * (strlen(s1) + n + 1));
-if (p == NULL)
-return ("");
-if (p != NULL)
-for (x = 0; s1[x] != '\0'; x++)
-{
-p[x] = s1[x];
-}
-for (y = 0; y < n && s2[y] != '\0'; y++)
-{
-p[x] = s2[y];
-x++;
-}
-p[x] = '\0';
-}
-else if (n >= strlen(s2))
-{
-p = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
-if (p == NULL)
-return ("");
-if (p != NULL)
-for (x = 0; s1[x] != '\0'; x++)
+while (s1 && s1[len1])
+len1++;
+while (s2 && s2[len2])
+len2++;
+if (n < len2)
+p = malloc(sizeof(char) * (len1 + n + 1));
+else
+p = malloc(sizeof(char) * (len1 + len2 + 1));
+if (!p)
+return (NULL);
+while (x < len1)
 {
 p[x] = s1[x];
-}
-for (y = 0; s2[y] != '\0'; y++)
-{
-p[x] = s2[y];
 x++;
 }
-p[x] = '\0';
+while (n < len2 && x < (len1 + n))
+{
+p[x++] = s2[y++];
 }
+while (n >= len2 && x < (len1 + len2))
+{
+p[x++] = s2[y++];
+}
+p[x] = '\0';
 return (p);
 }
