@@ -2,18 +2,16 @@
 #define DOG_H
 
 /**
- * struct dog - who let the dogs out!
+ * dog_t -typedef for struct!
  * @name: dog name.
  * @age: dog age
  * @owner: dog owner
  */
-struct dog
+typedef struct 
 {
 char *name;
 float age;
 char *owner;
-};
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
+} dog_t;
 
 #endif
