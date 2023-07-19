@@ -2,12 +2,13 @@
 #define DOG_H
 
 /**
- * dog_t -typedef for struct!
+ * struct dog - struct, who let the dogs out!
+ * dog_t - typedef for struct!
  * @name: dog name.
  * @age: dog age
  * @owner: dog owner
  */
-typedef struct 
+typedef struct dog
 {
 char *name;
 float age;
