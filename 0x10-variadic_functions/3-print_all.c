@@ -8,10 +8,10 @@
  */
 void print_all(const char * const format, ...)
 {
-va_list tr;
+va_list tr; /* declaration of variables and va_arg datatype */
 int x, c_stat;
 char *strg;
-va_start(tr, format);
+va_start(tr, format); /* initalized var arguments */
 x = 0;
 while (format != NULL && format[x] != '\0')
 {
@@ -19,7 +19,7 @@ switch (format[x])
 {
 case 'i':
 printf("%d", va_arg(tr, int));
-c_stat = 0;
+c_stat = 0; /* checks if condition has been met */
 break;
 case 'f':
 printf("%f", va_arg(tr, double));
@@ -39,10 +39,10 @@ default:
 c_stat = 1;
 break;
 }
-if (format[x + 1] != '\0' && c_stat == 0)
+if (format[x + 1] != '\0' && c_stat == 0) /* if not NULL */
 printf(", ");
-x++;
+x++; /* increment iteration step */
 }
 printf("\n");
-va_end(tr);
+va_end(tr); /* end of traversal */
 }
