@@ -1,9 +1,0 @@
-#include"main.h"
-/**
- *_abs - A function that computes the abbsolute value of an integer.
- *
- *Return: pointer to the resulting integer.
- */
-int _abs(int)
-{
-}
