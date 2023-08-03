@@ -1,0 +1,34 @@
+#include "main.h"
+
+/**
+ * optimus_prime - a function that confirms prime numbers
+ * @x: the input integer.
+ * @y: the divisor.
+ * Return: 1 or 0.
+ */
+int optimus_prime(int x, int y)
+{
+if (x <= 1)
+{
+return (0);
+}
+if (y == 1)
+{
+return (1);
+}
+if (x % y == 0)
+{
+return (0);
+}
+return (optimus_prime(x, y - 1));
+}
+/**
+ * is_prime_number - is a function that returns 1 if an input integer is
+ * a prime number, otherwise it returns 0.
+ * @n: the input integer.
+ * Return: either 1 or 0.
+ */
+int is_prime_number(int n)
+{
+return (optimus_prime(n, n - 1));
+}

@@ -8,6 +8,8 @@ int factorial(int n);
 int _pow_recursion(int x, int y);
 int test_sqrt(int i, int j);
 int _sqrt_recursion(int n);
+int optimus_prime(int x, int y);
+int is_prime_number(int n);
 int _putchar(char);
 char *_strcat(char *dest, char *src);
 char *_strncpy(char *dest, char *src, int n);
