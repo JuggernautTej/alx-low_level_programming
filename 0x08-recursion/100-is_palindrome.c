@@ -7,13 +7,10 @@
  */
 int _str_len(char *strg)
 {
-int len = 0;
-while (*strg != '\0')
-{
-len++;
-strg++;
-}
-return (len);
+if (*strg == '\0')
+return (0);
+else
+return (1 + _str_len(strg + 1));
 }
 /**
  * test_pal - function that returns 1 or 0 for a palindrome.
