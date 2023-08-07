@@ -25,6 +25,12 @@ char *_strdup(char *str)
 int x;
 char *p;
 int len =  _str_len(str);
+if (str == NULL)
+{
+return (NULL);
+}
+else
+{
 p = malloc(sizeof(char) * (len + 1));
 if (p == NULL)
 {
@@ -38,5 +44,6 @@ p[x] = str[x];
 }
 p[len] = '\0';
 return (p);
+}
 }
 }
