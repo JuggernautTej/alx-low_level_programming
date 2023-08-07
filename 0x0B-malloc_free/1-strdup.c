@@ -25,10 +25,6 @@ char *_strdup(char *str)
 int x;
 char *p;
 int len =  _str_len(str);
-if (str == NULL)
-{
-return (NULL);
-}
 p = malloc(sizeof(char) * (len + 1));
 if (p == NULL)
 {
