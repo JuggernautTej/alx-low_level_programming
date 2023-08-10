@@ -16,16 +16,17 @@ if (min > max)
 {
 return (NULL);
 }
-p = malloc(sizeof(int) * (max - min));
+p = malloc(sizeof(int) * ((max - min) + 1));
 if (p == NULL)
 {
 return (NULL);
 }
 else
 {
-for (x = 0; x <= (max - min); x++)
+for (x = 0; x < ((max - min) + 1); x++)
 {
-p[x] = min++;
+p[x] = min;
+min++;
 }
 }
 return (p);
