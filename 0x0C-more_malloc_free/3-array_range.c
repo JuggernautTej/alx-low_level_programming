@@ -25,8 +25,7 @@ else
 {
 for (x = 0; x < ((max - min) + 1); x++)
 {
-p[x] = min;
-min++;
+p[x] = min + x;
 }
 }
 return (p);
