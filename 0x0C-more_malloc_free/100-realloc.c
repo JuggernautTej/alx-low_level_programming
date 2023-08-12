@@ -17,9 +17,16 @@ if (new_size == old_size)
 return (ptr);
 r = malloc(new_size);
 if (ptr == NULL)
+{
 return (r);
-if (new_size == 0 && ptr != NULL)
+}
+else if (new_size == 0)
+{
 free(ptr);
+return (NULL);
+}
+if (r == NULL)
+return (NULL);
 for (x = 0; x < new_size; x++)
 {
 for (y = 0; y < old_size; y++)
