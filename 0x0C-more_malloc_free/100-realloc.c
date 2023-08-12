@@ -23,6 +23,7 @@ return (r);
 else if (new_size == 0)
 {
 free(ptr);
+free(r);
 return (NULL);
 }
 if (r == NULL)
