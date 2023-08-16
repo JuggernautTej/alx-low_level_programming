@@ -40,6 +40,8 @@ return (1 + _str_len(strg + 1));
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *p = malloc(sizeof(dog_t));
+if (p == NULL)
+return (NULL);
 p->name = malloc(_str_len(name) + 1);
 if (p->name != NULL)
 {
