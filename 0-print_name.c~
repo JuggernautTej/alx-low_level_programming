@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include "function_pointers.h"
+
+/**
+ * print_f - a function that prints a string.
+ * @strg: the string.
+ * Return: void.
+ */
+void print_f(char *strg)
+{
+int x;
+for(x = 0; strg[x] != '\0'; x++)
+{
+_putchar(strg[x]);
+}
+}
+/**
+ * print_name - a function that prints a name
+ * @name: the name as a string.
+ * @f: the pointer to the funtion print_f.
+ * Return: void.
+ */
+void print_name(char *name, void (*f)(char *))
+{
+f = print_f;
+f(name);
+}

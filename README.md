@@ -1,1 +1,1 @@
-This is the folder for my recursion project
+This is a directory for the function pointers project
