@@ -49,6 +49,7 @@ _strcpy(p->name, name);
 }
 else
 {
+free(p);
 return (NULL);
 }
 p->age = age;
@@ -59,6 +60,8 @@ _strcpy(p->owner, owner);
 }
 else
 {
+free(p->name);
+free(p);
 return (NULL);
 }
 return (p);
