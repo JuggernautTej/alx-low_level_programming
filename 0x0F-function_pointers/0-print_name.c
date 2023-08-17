@@ -15,4 +15,6 @@ f(name);
 }
 else
 return;
+if ( f = NULL)
+return;
 }
