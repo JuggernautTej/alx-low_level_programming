@@ -13,4 +13,6 @@ if (name != NULL)
 {
 f(name);
 }
+else
+return;
 }
