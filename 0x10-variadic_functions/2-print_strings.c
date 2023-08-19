@@ -19,7 +19,7 @@ for (x = 0; x < n; x++)
 strg = va_arg(tally, char *);
 if (strg == NULL)
 {
-printf("(nil");
+printf("(nil)");
 }
 else
 {
