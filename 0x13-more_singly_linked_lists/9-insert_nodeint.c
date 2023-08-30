@@ -36,6 +36,8 @@ listint_t *newnode, *tmp;
 unsigned int list_size;
 list_size = list_len(*head);
 newnode = (listint_t *) malloc(sizeof(listint_t));
+if (newnode == NULL)
+return (NULL);
 newnode->n = n;
 newnode->next = NULL;
 if (idx > list_size)
