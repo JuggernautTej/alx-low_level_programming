@@ -13,6 +13,8 @@ listint_t *tmp;
 int x;
 if (head == NULL)
 return (0);
+if (*head == NULL)
+return (0);
 else
 {
 tmp = *head;
