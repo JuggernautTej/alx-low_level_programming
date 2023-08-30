@@ -18,4 +18,5 @@ free(presentnode);
 presentnode = tmp;
 }
 *head = NULL;
+free(tmp);
 }
