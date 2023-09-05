@@ -41,9 +41,9 @@ if (sz == -1)
 {
 close(fd);
 free(c);
-return(0);
+return (0);
 }
 close(fd);
 free(c);
-return s_write;
+return (s_write);
 }
