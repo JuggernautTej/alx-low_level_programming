@@ -10,30 +10,17 @@
 char *_getenv(const char *name)
 {
   extern char **environ;
-  char *value = NULL;
-  char **env;
-  char *env_entry;
-  char *env_name;
-  for (env = environ; *env != NULL; env++)
+  int x;
+  char *tkn;
+  for (x = 0; environ[x] != NULL; x++)
     {
-      env_entry = *env;
-      env_name = env_entry;
-      while (*env_entry != '=' && *env_entry != '\0')
+      tkn = strtok(environ[x], "=");
+      if (strcmp(tkn, name) == 0)
 	{
-	  env_entry++;
-	}
-      if (*env_entry == '=')
-	{
-	  *env_entry = '\0';
-	  env_entry++;
-	}
-      if (strcmp(env_name, name) == 0)
-	{
-	  value = env_entry;
-	  break;
+	  return (strtok(NULL, "="));
 	}
     }
-  return (value);
+  return (NULL);
 }
 
 /**
@@ -42,7 +29,7 @@ char *_getenv(const char *name)
  */
 int main(void)
 {
-  char *username = _getenv("HOME");
+  char *username = _getenv("PATH");
   if (username != NULL)
     {
       printf("HOME=%s\n", username);
