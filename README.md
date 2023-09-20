@@ -1,1 +1,1 @@
-This is a directory for the function pointers project
+This directory handles the singly linked lists project.
