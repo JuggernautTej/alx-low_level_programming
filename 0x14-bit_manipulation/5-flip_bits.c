@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include "main.h"
+
+/**
+ * flip_bits - a function that returns the number of bits to flip
+ * @n: Initial number
+ * @m: final number.
+ * Return: number of bits to be flipped.
+ */
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{
+unsigned int bit_count = 0;
+unsigned int ex_or = n ^ m;
+while (ex_or)
+{
+bit_count += ex_or & 1;
+ex_or >>= 1;
+}
+return (bit_count);
+}
