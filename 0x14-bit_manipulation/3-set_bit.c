@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * set_bit - a function that sets the value of a bit at an index to 1.
+ * @n: pointer to an integer.
+ * @index: the index.
+ * Return: 1 or -1.
+ */
+int set_bit(unsigned long int *n, unsigned int index)
+{
+unsigned long int bitm;
+if (index > 31)
+return (-1);
+bitm = 1 << index;
+*n |= bitm;
+return (1);
+}
