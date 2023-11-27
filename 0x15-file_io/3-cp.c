@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * err_checker - a function to check errors.
+ * @arg1: return value of first argument.
+ * @arg2: return value of second argument.
+ * @argv: argument vector.
+ * Return: void.
+ */
+void err_checker(ssize_t arg1, ssize_t arg2, char **argv)
+{
+if (arg1 == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't read rom file %s\n", argv[1]);
+exit(98);
+}
+if (arg2 == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+exit(99);
+}
+}
+
+/**
+ * _close - custom close function.
+ * @fdes: file descriptor.
+ * Return: 0.
+ */
+int _close(ssize_t fdes)
+{
+int a;
+a = close(fdes);
+if (a == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", fdes);
+exit(100);
+}
+else
+return (0);
+}
+
+/**
+ * main - entry point to the function.
+ * @argc: argument count.
+ * @argv: argument vector.
+ * Return: 0.
+ */
+int main(int argc, char **argv)
+{
+ssize_t fd1, fd2, s_write, sz = 1024;
+char buff[1024];
+if (argc != 3)
+{
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+exit(97);
+}
+fd1 = open(argv[1], O_RDONLY);
+fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+err_checker(fd1, fd2, argv);
+while (sz)
+{
+sz = read(fd1, buff, 1024);
+if (sz == -1)
+{
+_close(fd1);
+_close(fd2);
+err_checker(-1, 0, argv);
+}
+s_write = write(fd2, buff, sz);
+if (s_write == -1 || s_write != sz)
+{
+_close(fd1);
+_close(fd2);
+err_checker(0, -1, argv);
+}
+}
+_close(fd1);
+_close(fd2);
+return (0);
+}
