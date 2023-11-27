@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <fctnl.h>
+#include <fcntl.h>
 #include "main.h"
 
 /**
