@@ -15,7 +15,7 @@ void err_checker(ssize_t arg1, ssize_t arg2, char **argv)
 {
 if (arg1 == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read rom file %s\n", argv[1]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
 if (arg2 == -1)
