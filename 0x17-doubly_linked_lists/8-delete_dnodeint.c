@@ -25,7 +25,6 @@ return (1);
 }
 for (tmp = *head; tmp != NULL; tmp = tmp->next)
 {
-tally++;
 if (tally == index)
 {
 node_at_idx =  tmp;
@@ -36,6 +35,7 @@ node_at_idx->prev->next = node_at_idx->next;
 free(node_at_idx);
 return (1);
 }
+tally++;
 }
 return (-1);
 }
