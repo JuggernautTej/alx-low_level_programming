@@ -5,10 +5,10 @@
  * @s: the string
  * Return: integer.
  */
-int _str_len(char *s)
+int _strlen(char *s)
 {
 if (*s == '\0')
 return (0);
 else
-return (1 + _str_len(s + 1));
+return (1 + _strlen(s + 1));
 }
